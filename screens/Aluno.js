@@ -11,7 +11,7 @@ import {
 export default function Email({ route }) {
   const { id } = route.params;
   const [aluno, setAluno] = useState([]);
-  
+
   useEffect(function () {
     async function getData() {
       const response = await fetch(
@@ -34,14 +34,14 @@ export default function Email({ route }) {
       <View style={styles.containerPais}>
         <View style={styles.itemPais}>
           <Image style={styles.imagemPais} source={{ uri: aluno.fotoMae }} />
-          <View>
+          <View style={styles.textosPais}>
             <Text style={styles.textoAluno}>Mãe</Text>
             <Text style={styles.textoAluno}>{aluno.mae}</Text>
           </View>
         </View>
         <View style={styles.itemPais}>
           <Image style={styles.imagemPais} source={{ uri: aluno.fotoPai }} />
-          <View>
+          <View style={styles.textosPais}>
             <Text style={styles.textoAluno}>Pai</Text>
             <Text style={styles.textoAluno}>{aluno.pai}</Text>
           </View>
@@ -65,6 +65,7 @@ const styles = StyleSheet.create({
   containerPais: {
     marginTop: 30,
     alignItems: 'flex-start',
+
   },
   textoAluno: {
     fontSize: 22
@@ -87,5 +88,8 @@ const styles = StyleSheet.create({
   itemPais: {
     flexDirection: 'row',
     marginTop: 10
+  },
+  textosPais: {
+    justifyContent: 'space-around'
   }
 });
