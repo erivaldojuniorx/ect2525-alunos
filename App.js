@@ -14,9 +14,9 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name="Alunos"
+          name="Pagina Inicial"
           component={PaginaInicial}
-          options={{ title: "Alunos", headerStyle, headerTintColor }}
+          options={{headerShown:false }}
         />
         <Stack.Screen
           name="Aluno"

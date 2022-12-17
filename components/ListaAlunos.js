@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-export default function Emails({ navigation }) {
+export default function ListaAlunos({ navigation }) {
   const [alunos, setAlunos] = useState([]);
 
   useEffect(function () {

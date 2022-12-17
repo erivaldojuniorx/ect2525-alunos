@@ -8,7 +8,7 @@ import {
 
 } from "react-native";
 
-export default function Email({ route }) {
+export default function Aluno({ route }) {
   const { id } = route.params;
   const [aluno, setAluno] = useState([]);
 
